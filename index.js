@@ -1,35 +1,3 @@
-// const express = require('express');
-// const path = require('path');
-
-// //-------------------------------------------------------------------------
-// const app = express();
-
-// //--------------------------------------------------------------------------
-
-// // setting up the encoders, so that we can get what is being sent by user on the frontend (in as it is format)---------------------------------------------
-// app.use(express.json());
-// app.use(express.urlencoded({ encoded: true }));
-
-// //setting up static files ------- (to use static js and css files)--------
-// app.use(express.static(path.join(__dirname, 'public')));
-
-// //setting up of the ejs files----------------------------------------------
-// app.set('view engine', 'ejs');
-
-// app.get('/', function (req, res) {
-//   // res.send('chal rha hai');
-//   res.render('index.ejs');
-// });
-
-// app.get('/api/v1/:name/:age', function (req, res) {
-//   res.send(`Hello, ${req.params.name} of age ${req.params.age} !`);
-// });
-
-// //------------------------------------------------------------------------------
-// app.listen(3000, function () {
-//   console.log('its running');
-// });
-
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -51,7 +19,6 @@ app.get('/', function (req, res) {
     console.log(file);
     res.render('index.ejs', { files: file });
   });
-  // res.render('index.ejs');
 });
 
 app.post('/create', function (req, res) {
